@@ -32,6 +32,12 @@ gem 'jquery-rails'
 gem 'tuxedo-css-rails'
 gem "simple_calendar", "~> 2.0"
 gem "watu_table_builder", :require => "table_builder"
+gem 'mailgun_rails'
+gem 'rest-client'
+gem 'paperclip', '~> 5.0.0'
+gem 'yt', '~> 0.13.7'
+gem 'autoprefixer-rails'
+gem 'rails-observers'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

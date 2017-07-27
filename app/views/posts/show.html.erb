@@ -5,6 +5,7 @@
 
    <br>
   <h3><%= @post.content %></h3>
+
   <br>
   <% if current_user.try(:admin?) %>
   <p><%= link_to "Edit Post", edit_post_path(@post) %></p>

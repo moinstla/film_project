@@ -984,22 +984,59 @@ footer {
   border-bottom: 2px solid #2A7F62;
   margin-bottom: 20px; }
 
-[class*='flex-center'], [class*='flex-end'] {
+[class*='flex-left'], [class*='flex-end'] {
   display: flex; }
 
-.flex-center {
+.flex-left {
   justify-content: center;
   align-items: center; }
 
-.flex-center-h {
+.flex-right-h {
   align-items: center;
   justify-content: flex-start; }
 
-.flex-center-v {
+.flex-right-v {
   justify-content: center;
   align-items: flex-start; }
 
-.flex-center-end {
+.flex-right-end {
+  justify-content: center;
+  align-items: flex-end; }
+
+.flex-end-v {
+  justify-content: flex-end;
+  align-items: flex-start; }
+
+.flex-end-h {
+  align-items: flex-end;
+  justify-content: flex-start; }
+
+.flex-end {
+  justify-content: flex-end;
+  align-items: flex-end; }
+
+.animate-in {
+  opacity: 0; }
+
+
+
+/*# sourceMappingURL=styles.css.map */
+[class*='flex-left'], [class*='flex-end'] {
+  display: flex; }
+
+.flex-left {
+  justify-content: center;
+  align-items: center; }
+
+.flex-left-h {
+  align-items: center;
+  justify-content: flex-start; }
+
+.flex-left-v {
+  justify-content: center;
+  align-items: flex-start; }
+
+.flex-left-end {
   justify-content: center;
   align-items: flex-end; }
 

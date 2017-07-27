@@ -14,22 +14,33 @@
 
   <body>
 
+    <nav class="nav-dark"> 
+      <ul class="menu-items"> 
+        <% if current_user %>
+        <li class="f-col-1 flex-left"><%= link_to "Sign out", destroy_user_session_path, method: 'delete' %></li>
+        </li> 
+        <% else %>
+        <li class="f-col-1 flex-left"><%= link_to 'Sign In', new_user_session_path %></li>
+        <li class="f-col-1 flex-left"><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <% end %>
+      </ul>
+    </nav>
+
 <div class="side-bar bg-dark-grey">
 
-  <ul class="underline-light">
-    <li class="active"><%= link_to "Home",  posts_path %></li>
-    <% if current_user %>
-      <li> <%= link_to "Sign out", destroy_user_session_path, method: 'delete' %></li>
+  <ul>
+    <li><%= link_to "Posts",  posts_path %></li>
+
     <li> <%= link_to "Add Post",  new_post_path %></li>
+    <li> <%= link_to "Shoots",  shoots_path %></li>
+    <li> <%= link_to "Add Shoot",  new_shoot_path %></li>
+    <li><%= link_to 'Videos', videos_path %></li>
+      <li><%= link_to 'Add Video', new_video_path %></li>
   </ul>
 
 
 
-        <% else %>
-        <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <% end %>
-        </ul>
+
       </div>
       <div class="side-bar-content">
       <%= yield %>

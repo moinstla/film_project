@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170726212248) do
+ActiveRecord::Schema.define(version: 20170727204805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,12 +21,17 @@ ActiveRecord::Schema.define(version: 20170726212248) do
     t.integer "post_id"
   end
 
+  create_table "episodes", force: :cascade do |t|
+    t.integer "youtube_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.string "title"
     t.string "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "url"
   end
 
   create_table "shoots", force: :cascade do |t|
@@ -53,6 +58,14 @@ ActiveRecord::Schema.define(version: 20170726212248) do
     t.string "password"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "link"
+    t.string "uid"
+    t.string "published_at"
+    t.string "title"
+    t.string "youtube_id"
   end
 
 end
